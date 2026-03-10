@@ -11,14 +11,14 @@ In this **first project**, I demonstrate how to deploy a **Sample App** using va
 
 **About Me**
 K. Mani Babu, 4+ years of experience in the below DevOps tools,
-**Cloud → AWS
-Code → GitHub
-CI/CD → Jenkins
-Container → Docker
-Artifact Repository → Sonatype Nexus Repository / AWS Elastic Container Registry
-Orchestration → Kubernetes / Amazon Elastic Kubernetes Service
-IaC → Terraform
-Configuration Management → Ansible
-Monitoring → Prometheus + Grafana
-GitOps → Argo CD
-**
+
+1. **Cloud** → AWS
+2. **Code** → GitHub
+3. **CI/CD** → Jenkins
+4. **Container** → Docker
+5. **Artifact Repository** → Sonatype Nexus Repository / AWS Elastic Container Registry
+6. **Orchestration** → Kubernetes / Amazon Elastic Kubernetes Service
+7. **IaC** → Terraform
+8. **Configuration Management** → Ansible
+9. **Monitoring** → Prometheus + Grafana
+10. **GitOps** → Argo CD
