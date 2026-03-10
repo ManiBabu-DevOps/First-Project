@@ -10,6 +10,7 @@ In this **first project**, I demonstrate how to deploy a **Sample App** using va
    ![DockerHub]
 
 **About Me**
+
 **Name: K. Mani Babu** -> AWS DevOps Engineer with 4+ years of experience designing, automating, and managing scalable cloud infrastructure on AWS for microservices-based applications. Experienced in implementing Infrastructure as Code using Terraform and CloudFormation, building secure CI/CD pipelines using Jenkins, GitHub, SonarQube, Nexus, and Docker, and deploying containerized workloads on Kubernetes (Amazon EKS). Skilled in GitOps deployments using ArgoCD and improving reliability through monitoring solutions such as Prometheus, Grafana, and AWS CloudWatch. Proven ability to reduce deployment time, improve system availability, and optimize cloud infrastructure costs.
 
 1. **Cloud** → AWS
