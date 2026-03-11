@@ -1,0 +1,85 @@
+Below are two Kubernetes Service YAML files to expose an application:
+
+1️⃣ NodePort Service
+2️⃣ LoadBalancer Service
+
+1️⃣ NodePort Service File (nodeport-service.yml)
+This exposes the application using Node IP + Port.
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-nodeport-service
+
+spec:
+  selector:
+    app: nodejs-app
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+    nodePort: 30007
+
+  type: NodePort
+  
+  *******************************************
+  Explanation:
+port: 80 → service port
+
+targetPort: 3000 → container port
+
+nodePort: 30007 → external port
+
+type: NodePort → exposes application via node IP
+
+Access example: http://<NodeIP>:30007
+
+Example: http://192.168.1.10:30007
+
+2️⃣ LoadBalancer Service File (loadbalancer-service.yml)
+This exposes the application using a cloud load balancer (used in AWS EKS, Azure AKS, GCP GKE).
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-loadbalancer-service
+
+spec:
+  selector:
+    app: nodejs-app
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+
+  type: LoadBalancer
+
+  ***********************************************
+  apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-loadbalancer-service
+
+spec:
+  selector:
+    app: nodejs-app
+
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3000
+
+  type: LoadBalancer
+
+Explanation:
+type: LoadBalancer → Kubernetes creates a cloud load balancer
+Works in AWS EKS with Elastic Load Balancer (ELB).
+
+Check service: 
+kubectl get svc
+
+Example output:
+NAME                         TYPE           EXTERNAL-IP
+nodejs-loadbalancer-service  LoadBalancer   a1b2c3d4.elb.amazonaws.com
+
+Access example: http://a1b2c3d4.elb.amazonaws.com
